@@ -27,3 +27,15 @@
   padding: 24px 0;
 }
 
+.buttons .value-button {
+  background-color: #e0e0e0;
+}
+
+.buttons .value-button:hover {
+  background-color: #d1d1d1;
+  transform: scale(1.05);
+}
+
+.buttons .value-button:active {
+  background-color: #c0c0c0;
+}
