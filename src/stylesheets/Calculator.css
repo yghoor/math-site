@@ -39,3 +39,8 @@
 .buttons .value-button:active {
   background-color: #c0c0c0;
 }
+
+.buttons .zero-button {
+  grid-column: 1 / 3;
+}
+
