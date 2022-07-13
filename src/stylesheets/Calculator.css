@@ -4,3 +4,11 @@
   width: 50vw;
   margin-left: 25%;
 }
+
+.calculator-display {
+  font-size: 3em;
+  text-align: end;
+  color: white;
+  background-color: #858693;
+  padding: 16px;
+}
