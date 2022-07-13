@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
+import '../stylesheets/Calculator.css';
 
 const Display = () => (
   <div className="calculator-display">
