@@ -17,3 +17,13 @@
   display: grid;
   grid-template: 30% 30% 30% 30% 30% / auto auto auto auto;
 }
+
+.buttons .button {
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d1d1;
+  padding: 24px 0;
+}
+
