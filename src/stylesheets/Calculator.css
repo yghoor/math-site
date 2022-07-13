@@ -12,3 +12,8 @@
   background-color: #858693;
   padding: 16px;
 }
+
+.buttons {
+  display: grid;
+  grid-template: 30% 30% 30% 30% 30% / auto auto auto auto;
+}
