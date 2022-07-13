@@ -1,5 +1,6 @@
 # linters
 .stylelintrc.json
+.hintrc
 .eslintrc.json
 
 # dependencies
