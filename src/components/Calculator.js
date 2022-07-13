@@ -30,3 +30,16 @@ const Buttons = () => (
   </div>
 );
 
+class Calculator extends Component {
+  state = {}
+
+  // eslint-disable-next-line class-methods-use-this
+  render() {
+    return (
+      <section className="calculator">
+        <Display />
+        <Buttons />
+      </section>
+    );
+  }
+}
