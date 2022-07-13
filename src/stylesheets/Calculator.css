@@ -44,3 +44,15 @@
   grid-column: 1 / 3;
 }
 
+.buttons .operator-button {
+  background-color: #f98f47;
+}
+
+.buttons .operator-button:hover {
+  background-color: #ff7b23;
+  transform: scale(1.05);
+}
+
+.buttons .operator-button:active {
+  background-color: #ff6a1f;
+}
