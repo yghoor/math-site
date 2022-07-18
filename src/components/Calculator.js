@@ -3,11 +3,28 @@ import React, { Component } from 'react';
 import '../stylesheets/Calculator.css';
 import calculate from '../logic/calculate.js';
 
-const Display = () => (
-  <div className="calculator-display">
-    <div className="display-value">0</div>
-  </div>
-);
+function Display(props) {
+  const newValue = () => {
+    if (props.newData === undefined) {
+      return '0';
+    }
+
+    const { total, next } = props.newData;
+    if (next) {
+      return next;
+    }
+    if (total) {
+      return total;
+    }
+    return '0';
+  };
+
+  return (
+    <div className="calculator-display">
+      <div className="display-value">{newValue()}</div>
+    </div>
+  );
+}
 
 const Buttons = () => (
   <div className="buttons">
