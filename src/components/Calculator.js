@@ -89,7 +89,13 @@ const Buttons = (props) => (
 );
 
 class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      calculatorData: {},
+    };
   state = {}
+  }
 
   // eslint-disable-next-line class-methods-use-this
   render() {
