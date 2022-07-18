@@ -97,7 +97,11 @@ class Calculator extends Component {
     this.updateCalculatorData = this.updateCalculatorData.bind(this);
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  updateCalculatorData(buttonName) {
+    const calculatorData = calculate(this.state.calculatorData, buttonName);
+    this.setState({ calculatorData });
+  }
+
   render() {
     return (
       <section className="calculator">
