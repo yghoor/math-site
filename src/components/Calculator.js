@@ -105,8 +105,10 @@ class Calculator extends Component {
   render() {
     return (
       <section className="calculator">
-        <Display />
-        <Buttons />
+        <Display newData={this.state.calculatorData}/>
+        <Buttons
+          updateCalculatorData={this.updateCalculatorData}
+        />
       </section>
     );
   }
