@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/Calculator.css';
 import calculate from '../logic/calculate.js';
 
