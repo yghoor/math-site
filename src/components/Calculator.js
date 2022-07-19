@@ -88,30 +88,20 @@ const Buttons = (props) => (
   </div>
 );
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      calculatorData: {},
-    };
-    this.updateCalculatorData = this.updateCalculatorData.bind(this);
+export default function Calculator() {
+  const [calculatorData, setCalculatorData] = useState({});
+
+  function updateCalculatorData(buttonName) {
+    const newCalculatorData = calculate({ ...calculatorData }, buttonName);
+    setCalculatorData({ ...newCalculatorData });
   }
 
-  updateCalculatorData(buttonName) {
-    const calculatorData = calculate(this.state.calculatorData, buttonName);
-    this.setState({ calculatorData });
-  }
-
-  render() {
-    return (
-      <section className="calculator">
-        <Display newData={this.state.calculatorData}/>
-        <Buttons
-          updateCalculatorData={this.updateCalculatorData}
-        />
-      </section>
-    );
-  }
+  return (
+    <section className="calculator">
+      <Display newData={ calculatorData }/>
+      <Buttons
+        updateCalculatorData={updateCalculatorData}
+      />
+    </section>
+  );
 }
-
-export default Calculator;
