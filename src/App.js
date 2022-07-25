@@ -2,6 +2,7 @@
 import './App.css';
 import Home from './pages/Home.js';
 import Math from './pages/Math.js';
+import Quote from './pages/Quote.js';
 
 function App() {
   return (
