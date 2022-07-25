@@ -9,6 +9,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="math" element={<Math />} />
+        <Route path="quote" element={<Quote />} />
+      </Routes>
     </div>
   );
 }
