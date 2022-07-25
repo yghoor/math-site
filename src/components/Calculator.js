@@ -28,63 +28,158 @@ function Display(props) {
 
 const Buttons = (props) => (
   <div className="buttons">
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('AC');
-    }}>AC</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('+/-');
-    }}>+/-</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('%');
-    }}>%</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('÷');
-    }}>÷</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('7');
-    }}>7</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('8');
-    }}>8</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('9');
-    }}>9</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('x');
-    }}>x</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('4');
-    }}>4</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('5');
-    }}>5</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('6');
-    }}>6</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('-');
-    }}>-</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('1');
-    }}>1</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('2');
-    }}>2</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('3');
-    }}>3</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('+');
-    }}>+</button>
-    <button className="button value-button zero-button" onClick={() => {
-      props.updateCalculatorData('0');
-    }}>0</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('.');
-    }}>.</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('=');
-    }}>=</button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('AC');
+      }}
+    >
+      AC
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('+/-');
+      }}
+    >
+      +/-
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('%');
+      }}
+    >
+      %
+    </button>
+    <button
+      className="button operator-button"
+      onClick={() => {
+        props.updateCalculatorData('÷');
+      }}
+    >
+      ÷
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('7');
+      }}
+    >
+      7
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('8');
+      }}
+    >
+      8
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('9');
+      }}
+    >
+      9
+    </button>
+    <button
+      className="button operator-button"
+      onClick={() => {
+        props.updateCalculatorData('x');
+      }}
+    >
+      x
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('4');
+      }}
+    >
+      4
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('5');
+      }}
+    >
+      5
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('6');
+      }}
+    >
+      6
+    </button>
+    <button
+      className="button operator-button"
+      onClick={() => {
+        props.updateCalculatorData('-');
+      }}
+    >
+      -
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('1');
+      }}
+    >
+      1
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('2');
+      }}
+    >
+      2
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('3');
+      }}
+    >
+      3
+    </button>
+    <button
+      className="button operator-button"
+      onClick={() => {
+        props.updateCalculatorData('+');
+      }}
+    >
+      +
+    </button>
+    <button
+      className="button value-button zero-button"
+      onClick={() => {
+        props.updateCalculatorData('0');
+      }}
+    >
+      0
+    </button>
+    <button
+      className="button value-button"
+      onClick={() => {
+        props.updateCalculatorData('.');
+      }}
+    >
+      .
+    </button>
+    <button
+      className="button operator-button"
+      onClick={() => {
+        props.updateCalculatorData('=');
+      }}
+    >
+      =
+    </button>
   </div>
 );
 
@@ -98,10 +193,8 @@ export default function Calculator() {
 
   return (
     <section className="calculator">
-      <Display newData={ calculatorData }/>
-      <Buttons
-        updateCalculatorData={updateCalculatorData}
-      />
+      <Display newData={calculatorData} />
+      <Buttons updateCalculatorData={updateCalculatorData} />
     </section>
   );
 }
