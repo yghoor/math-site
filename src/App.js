@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home.js';
 import Math from './pages/Math.js';
