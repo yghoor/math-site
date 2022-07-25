@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
 import Home from './pages/Home.js';
-import Calculator from './components/Calculator.js';
+import Math from './pages/Math.js';
 
 function App() {
   return (
