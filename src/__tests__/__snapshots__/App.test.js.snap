@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders App 1`] = `
+Array [
+  <header>
+    <nav
+      className="page-navbar"
+    >
+      <h1>
+        Math Magicians
+      </h1>
+      <ul
+        className="nav-links"
+      >
+        <li>
+          <a
+            activeclassname="active"
+            aria-current="page"
+            className="active"
+            href="#/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            activeclassname="active"
+            className=""
+            href="#/math"
+            onClick={[Function]}
+          >
+            Calculator
+          </a>
+        </li>
+        <li>
+          <a
+            activeclassname="active"
+            className=""
+            href="#/quote"
+            onClick={[Function]}
+          >
+            Quote
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>,
+  <div
+    className="home-page"
+  >
+    <h1>
+      Welcome to our page!
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet quod fugit incidunt, possimus ea voluptatibus. Error tenetur quis ullam minus, perferendis dolore ipsam ut dolor ipsa quo commodi nulla?
+    </p>
+  </div>,
+]
+`;
