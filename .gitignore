@@ -2,6 +2,7 @@
 .stylelintrc.json
 .hintrc
 .eslintrc.json
+.babelrc
 
 # dependencies
 /node_modules
