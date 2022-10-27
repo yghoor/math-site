@@ -1,15 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../stylesheets/Calculator.css';
-import calculate from '../logic/calculate.js';
+import calculate from '../logic/calculate';
 
-function Display(props) {
+function Display({ newData }) {
   const newValue = () => {
-    if (props.newData === undefined) {
+    if (newData === undefined) {
       return '0';
     }
 
-    const { total, next } = props.newData;
+    const { total, next } = newData;
     if (next) {
       return next;
     }
@@ -26,65 +27,179 @@ function Display(props) {
   );
 }
 
-const Buttons = (props) => (
+const Buttons = ({ updateCalculatorData }) => (
   <div className="buttons">
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('AC');
-    }}>AC</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('+/-');
-    }}>+/-</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('%');
-    }}>%</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('÷');
-    }}>÷</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('7');
-    }}>7</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('8');
-    }}>8</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('9');
-    }}>9</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('x');
-    }}>x</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('4');
-    }}>4</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('5');
-    }}>5</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('6');
-    }}>6</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('-');
-    }}>-</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('1');
-    }}>1</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('2');
-    }}>2</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('3');
-    }}>3</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('+');
-    }}>+</button>
-    <button className="button value-button zero-button" onClick={() => {
-      props.updateCalculatorData('0');
-    }}>0</button>
-    <button className="button value-button" onClick={() => {
-      props.updateCalculatorData('.');
-    }}>.</button>
-    <button className="button operator-button" onClick={() => {
-      props.updateCalculatorData('=');
-    }}>=</button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('AC');
+      }}
+    >
+      AC
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('+/-');
+      }}
+    >
+      +/-
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('%');
+      }}
+    >
+      %
+    </button>
+    <button
+      type="button"
+      className="button operator-button"
+      onClick={() => {
+        updateCalculatorData('÷');
+      }}
+    >
+      ÷
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('7');
+      }}
+    >
+      7
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('8');
+      }}
+    >
+      8
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('9');
+      }}
+    >
+      9
+    </button>
+    <button
+      type="button"
+      className="button operator-button"
+      onClick={() => {
+        updateCalculatorData('x');
+      }}
+    >
+      x
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('4');
+      }}
+    >
+      4
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('5');
+      }}
+    >
+      5
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('6');
+      }}
+    >
+      6
+    </button>
+    <button
+      type="button"
+      className="button operator-button"
+      onClick={() => {
+        updateCalculatorData('-');
+      }}
+    >
+      -
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('1');
+      }}
+    >
+      1
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('2');
+      }}
+    >
+      2
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('3');
+      }}
+    >
+      3
+    </button>
+    <button
+      type="button"
+      className="button operator-button"
+      onClick={() => {
+        updateCalculatorData('+');
+      }}
+    >
+      +
+    </button>
+    <button
+      type="button"
+      className="button value-button zero-button"
+      onClick={() => {
+        updateCalculatorData('0');
+      }}
+    >
+      0
+    </button>
+    <button
+      type="button"
+      className="button value-button"
+      onClick={() => {
+        updateCalculatorData('.');
+      }}
+    >
+      .
+    </button>
+    <button
+      type="button"
+      className="button operator-button"
+      onClick={() => {
+        updateCalculatorData('=');
+      }}
+    >
+      =
+    </button>
   </div>
 );
 
@@ -98,14 +213,15 @@ class Calculator extends Component {
   }
 
   updateCalculatorData(buttonName) {
-    const calculatorData = calculate(this.state.calculatorData, buttonName);
+    const calculatorData = calculate((prevState) => (prevState.calculatorData), buttonName);
     this.setState({ calculatorData });
   }
 
   render() {
+    const { calculatorData } = this.state;
     return (
       <section className="calculator">
-        <Display newData={this.state.calculatorData}/>
+        <Display newData={calculatorData} />
         <Buttons
           updateCalculatorData={this.updateCalculatorData}
         />
@@ -115,3 +231,19 @@ class Calculator extends Component {
 }
 
 export default Calculator;
+
+Display.propTypes = {
+  newData: PropTypes.shape({
+    total: PropTypes.string.isRequired,
+    next: PropTypes.string.isRequired,
+    operation: PropTypes.string.isRequired,
+  }),
+};
+
+Display.defaultProps = {
+  newData: {},
+};
+
+Buttons.propTypes = {
+  updateCalculatorData: PropTypes.func.isRequired,
+};
